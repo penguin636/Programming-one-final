@@ -4,12 +4,14 @@ public class Contract {
     private Building building;
     private int payment;
     private String issuer;
+    private boolean accepted;
 
     public Contract(Building buildingOne, int paymentInt, String issuerString)
     {
         building=buildingOne;
         payment=paymentInt;
         issuer=issuerString;
+        accepted=false;
     }
 
     
@@ -29,13 +31,23 @@ public class Contract {
         if (acceptance=='y')
         {
             System.out.println("Contract accepted.");
+            accepted=true;
+
         }
-        else
+        else;
         {
             System.out.println("Contract denied");
         }
         
-        keyboard.close();
+    }
+
+    public int returnPayment()
+    {
+        return payment;
+    }
+    public boolean returnAccept()
+    {
+        return accepted;
     }
 }
 

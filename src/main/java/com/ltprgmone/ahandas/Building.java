@@ -66,5 +66,8 @@ public class Building {
 
         return ("building known as "+"'"+name+"'"+" at the address "+address+". There are "+occupentRating+" people inside. This job will be "+difficultyRating+".");
     }
-    
+    public int difficultyFinder()
+    {
+        return (flamability-danger);
+    }
 }
